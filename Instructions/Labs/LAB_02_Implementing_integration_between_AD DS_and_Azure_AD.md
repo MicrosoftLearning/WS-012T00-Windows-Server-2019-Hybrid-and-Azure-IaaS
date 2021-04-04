@@ -59,7 +59,7 @@ The main tasks for this exercise are:
 
 1. On the **Azure Active Directory** page, select **Custom domain names**, and then add ```contoso.com```.
 
-1. Review the DNS record types that you would use to verify the domain.
+1. Review the DNS record types that you would use to verify the domain, and then close the pane without verifying the domain name.
 
 >**Note:** The domain name provided might not be a valid domain. While you would use DNS records to verify a domain, this lab doesn't require that verification step.
 
