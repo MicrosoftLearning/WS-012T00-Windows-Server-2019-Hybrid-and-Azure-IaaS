@@ -306,9 +306,9 @@ lab:
 
 ### Task 5: Install and register the Azure AD Password Protection proxy service and DC agent
 
-1. On **SEA-SVR2**, start Microsoft Edge, and then browse to the Microsoft website, and search for “Azure AD Password Protection for Windows Server Active Directory” to find the **Azure AD Password Protection for Windows Server Active Directory** page.
+1. On **SEA-SVR2**, start Microsoft Edge, and then browse to the Microsoft website, and search for “Azure AD Password Protection for Windows Server Active Directory” to find the **Azure AD Password Protection for Windows Server Active Directory** page and select **Download**.
 
-1. On the **Azure AD Password Protection for Windows Server Active Directory** page, select the **AzureADPasswordProtectionProxySetup.exe** and the **AzureADPasswordProtectionDCAgentSetup.msi** files, and then select **Next**.
+1. On the Azure AD Password Protection for Windows Server Active Directory page, select the AzureADPasswordProtectionProxySetup.exe and the AzureADPasswordProtectionDCAgentSetup.msi files, and then select Next.
 
 1. Select **Download**.
 
