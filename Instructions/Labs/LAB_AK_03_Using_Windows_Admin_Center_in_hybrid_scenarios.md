@@ -16,7 +16,7 @@ lab:
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
     >**Note**: If this is the first time you are starting **Cloud Shell** and you are presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and select **Create storage**.
-1. In the toolbar of the Cloud Shell blade, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **M03-lab-sub_template.json** into the Cloud Shell home directory.
+1. In the toolbar of the Cloud Shell blade, select the **Upload/Download files** icon, in the drop-down menu select **Upload**, and upload the file **M03-lab-sub_template.json** into the Cloud Shell home directory, which can be found at C:\Labfiles\Mod03 into the Cloud Shell home directory.
 1. From the Cloud Shell blade, run the following to create a resource group that will contain resources you provision in this lab (replace the `<Azure region>` placeholder with the name of the Azure region that is available in your subscription and which is closest to the location of your lab computer):
 
    ```pwsh
@@ -47,6 +47,8 @@ lab:
     >**Note**: Wait for the deployment to complete before you proceed to the next exercise. The deployment should take less than 5 minutes.
 
 1. In the Azure portal, close the **Cloud Shell** blade.
+
+1. Review the **ws2019-m03-vnet** subnets. If there is no gateway subnet, then create a **Gateway subnet** using **10.3.3.224/27**.
 
 ## Exercise 2: Implementing hybrid connectivity by using the Azure Network Adapter
 
@@ -80,7 +82,7 @@ lab:
 
 ### Task 2: Create an Azure Network Adapter
 
-1. In the Microsoft Edge tab, navigate back to the ```lon-srv2.contoso.com``` page and select **Networks** again.
+1. In the Microsoft Edge tab, navigate back to the ```sea-srv2.contoso.com``` page and select **Networks** again.
 1. On the Windows Admin Center page, in the **Networks** blade, select **+ Add Azure Network Adapter (Preview)**.
 1. On the Add Network Adapter Settings blade, specify the following settings and select **Create** (leave others with their default values)"
 
@@ -220,8 +222,7 @@ lab:
 1. On the **All connections** page, select **+ Add**.
 1. On the **Add or create resources** blade, in the **Servers** section, select **Add**.
 1. In the **Server name** textbox, type **10.3.0.4** and select **Add**.
-1. In the list of connections, select **10.3.0.4**
-1. On the **Specify your credentials** blade, select the **Use another account for this connection** is selected, specify the following credentials, and select **Continue**.
+1. On the **Specify your credentials** blade, select the **Use another account for this connection** is selected, specify the following credentials, and select **Add with credentials**.
 
 *Table 4: Sign in credentials*
 
