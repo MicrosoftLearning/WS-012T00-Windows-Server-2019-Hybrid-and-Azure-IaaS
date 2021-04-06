@@ -79,6 +79,8 @@ The main tasks for this exercise are as follows:
    ```
 
     >**Note**: Wait for the deployment to complete before you proceed to the next exercise. The deployment should take less than 5 minutes.
+    
+1. Review the ws2019-m03-vnet subnets. If there is no gateway subnet, then create a Gateway subnet using 10.3.3.224/27.
 
 ## Exercise 2: Implementing hybrid connectivity by using the Azure Network Adapter
 
