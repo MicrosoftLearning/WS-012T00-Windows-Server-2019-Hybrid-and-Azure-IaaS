@@ -23,7 +23,7 @@ lab:
 **Upload the Resource Manager templates**
 
 1. In Cloud Shell, select **Upload/Download files**, and then select **Upload**.
-1. Browse to the **c:\\labfiles\\mod04** folder.
+1. Browse to the Desktop folder and then **Allfiles\Labfiles\Mod04** folder.
 1. Select the **M04-lab-rg_template.json** file, and then select **Open**.
 1. Repeat steps 1 through 3 for the following files:
     - **M04-lab-rg_template.parameters.json**
@@ -97,9 +97,9 @@ lab:
     > **Note:** You can save these values in Notepad or make a note of them.
 1. Select the **Download Windows Agent (64 bit)** link.
 1. In the download status bar, on the context menu for **MMASetup-AMD64.exe**, select **Show in folder**.
-1. Copy the file to **c:\\labfiles\\mod04**.
+1. Copy the file to c:\labfiles\mod04. Create the folder if needed.
 1. Select **Start**, and then open Windows PowerShell.
-1. In PowerShell, browse to **c:\\labfiles\\Mod04**.
+1. In PowerShell, browse to c:\labfiles\Mod04.
 1. Enter the following command:
 
     ```powershell
