@@ -12,8 +12,8 @@ lab:
 ### Task 1: Deploy DFS
 
 1. Sign in to **SEA-CL1** as **Contoso\\Administrator** and use **Pa55w.rd** as the password.
-2. On the taskbar, select **File Explorer**.
-3. In File Explorer, browse to the **C:\\Labfiles\\Mod05** folder.
+2. On the taskbar, select **File Explorer**. If in the Lab Setup the **Allfiles** folder was copied to the **Desktop**, then open the **Allfiles** folder, and copy the **Labfiles** folder to **C:**.  Then share the **Labfiles** folder to **Everyone** with **Read** access.
+3. In File Explorer, browse to the C:\Labfiles\Mod05 folder.
 4. In File Explorer, in the **details** pane, right-click or access the context menu for **M05_DeployDFS.ps1**, and then select **Run with PowerShell**.
 
 ### Task 2: Test DFS deployment
@@ -60,7 +60,7 @@ lab:
 
 1. On **SEA-CL1**, in the Azure portal, in the **details** pane, select **share1**.
 2. In the **details** pane, select **Upload**.
-3. On the **Upload files** tab, browse to **C:\\Labfiles\\Mod05\\File1.txt**, select **Upload**, and when the upload is complete, close the **Upload files** tab.
+3. On the Upload files tab, browse to C:\Labfiles\Mod05\File1.txt, select Upload, and when the upload is complete, close the Upload files tab.
 4. On the **share1** blade, select **Snapshots**, select **Add snapshot**, and then select **OK**.
 5. On the **share1** blade, select **Overview**, select **Connect**, use the **Copy to clipboard** button to copy the script, and then close the **Connect** tab.
 6. Right-click or access the context menu for **Start**, and then select **Windows PowerShell**.
@@ -79,7 +79,7 @@ lab:
 ### Task 3: Deploy Storage Sync Service and a File Sync group
 
 1. On **SEA-CL1**, in the Azure portal, select **Create a resource** on the **navigation** blade, enter **Azure File Sync** in the text box, select **Azure File Sync**, and then select **Create**.
-2. In the **Deploy File Sync** pane, for **Resource Group**, select **Create new**, enter **RG1** and then select **OK**. Enter **FileSync1** as the Storage Sync Service name, ensure that the same region is selected as was used for the storage account, and then select **Review and create** and **Create**.
+2. In the **Deploy File Sync** pane, for **Resource Group**, select **RG1**. Enter **FileSync1** as the Storage Sync Service name, ensure that the same region is selected as was used for the storage account, and then select **Review and create** and **Create**.
 3. After Storage Sync Service deploys, select **Go to resource**.
 4. On the **Storage Sync Service** blade, select **Sync groups**, and then select **Sync group** to create a new File Sync group.
 5. In the **Sync group** pane, enter **Sync1** in the **Sync group name** text box.
@@ -91,7 +91,7 @@ lab:
 
 ### Task 1: Add SEA-SVR1 as a server endpoint
 
-1. On **SEA-CL1**, in the Azure portal, download the File Sync agent for Windows Server 2019 (**StorageSyncAgent_WS2019.msi**), and then save it to the **C:\\Labfiles** folder. After the download is complete, open the Microsoft Edge tab that opened for the download.
+1. On **SEA-CL1**, in the Azure portal, download the File Sync agent for Windows Server 2019 (**StorageSyncAgent_WS2019.msi**), and then save it to the **C:\\Labfiles** folder. After the download is complete, close the Microsoft Edge tab that opened for the download.
 
     >**Note:** If you downloaded the file to the default location, you need to copy the file to the **C:\\Labfiles** folder.
 
@@ -188,7 +188,7 @@ lab:
 1. In **Storage Sync Service** pane, select **Registered Servers**, in the **details** pane, right-click or access the context menu for ```SEA-SVR1.Contoso.com```, select **Unregister server**, in the **Unregister server** pane, enter ```SEA-SVR1.Contoso.com``` in a text box, and then select **Unregister**.
 1. Wait until the registration for both servers is removed.
 1. In the **Storage Sync Service** pane, select **Sync groups**, and then in the **details** pane, select **Sync1**.
-1. In the **Sync1** pane, right-click or access the context menu for **share1** in the **cloud endpoints** section, and then select **OK**.
+1. In the **Sync1** pane, right-click or access the context menu for **share1** in the **cloud endpoints** section, select **Delete** and then select **OK**.
 1. Wait until **share1** is deleted.
 1. Select **Delete**, and then select **OK**.
 1. In the **navigation** pane, select **All resources**.
