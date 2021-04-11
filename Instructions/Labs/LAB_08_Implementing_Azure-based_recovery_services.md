@@ -69,7 +69,7 @@ The main tasks for this exercise are as follows:
    |Host Admin Username|Student|
    |Host Admin Password|Pa55w.rd1234|
 
-   > **Note: **Wait for the deployment to complete. The deployment might take about 10 minutes.
+   > **Note:** Wait for the deployment to complete. The deployment might take about 10 minutes.
 
 #### Task 2: Connect to the Azure VM running the Windows Server 2019 with the Hyper-V role installed
 
@@ -84,7 +84,7 @@ The main tasks for this exercise are as follows:
    |Protocol|Any|
    |Name|AllowRDPInBound|
 
-    > **Note: **Make sure that you modify the settings of **ws2019-08-hvm0-nic1**, which has the public IP address assigned to it.
+    > **Note:** Make sure that you modify the settings of **ws2019-08-hvm0-nic1**, which has the public IP address assigned to it.
 
 1. In the Azure portal, navigate to the **ws2019-08-hvm0** blade. 
 1. From the **ws2019-08-hvm0** blade, connect via Remote Desktop to **ws2019-08-hvm0**. When prompted to authenticate, sign in as **Student** with the **Pa55w.rd1234** password. 
@@ -148,14 +148,14 @@ The main tasks for this exercise are as follows:
    |Vault name|ws2019-08a-rsvault|
    |Location|the name of an Azure region different from the one into which you deployed the Azure VM in the first exercise of this lab|
 
-    > **Note: **By default, the default configuration for Storage Replication type is set to Geo-redundant (GRS) and Soft Delete is enabled. You will change these settings in the lab to simplify deprovisioning, but you should use them in your production environments.
+    > **Note:** By default, the default configuration for Storage Replication type is set to Geo-redundant (GRS) and Soft Delete is enabled. You will change these settings in the lab to simplify deprovisioning, but you should use them in your production environments.
 
 #### Task 2: Configure the Azure Site Recovery vault
 
 1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Azure portal, navigate to the **ws2019-08a-rsvault** blade.
 1. From the **ws2019-08a-rsvault** blade, set **Storage replication type** of the vault to **Locally-redundant** which is in the Recovery Vault's Properties - Backup Configuration blade.
 
-   > **Note: **Storage replication type cannot be changed once you implement protection.
+   > **Note:** Storage replication type cannot be changed once you implement protection.
 
 1. From the **ws2019-08a-rsvault** blade, disable **Soft Delete** of the vault which is in the Recovery Vault's Properties - Security Settings blade.
 
@@ -219,7 +219,7 @@ The main tasks for this exercise are as follows:
    |Subnet name|subnet3|
    |Subnet address range|10.0.2.0/24|
 
-   > **Note: **This matches the IP address range of the production network and the subnet containing the Hyper-V that needs to be protected. 
+   > **Note:** This matches the IP address range of the production network and the subnet containing the Hyper-V that needs to be protected. 
 
 1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Azure portal, create a storage account with the following settings (leave others with their default values):
 
@@ -309,12 +309,12 @@ The main tasks for this exercise are as follows:
 1. In the Azure portal, back on the **ws2019-08a-rsvault \| Site Recovery** blade, in navigate to the the **ws2019-08a-rsvault \| Replicated items** blade.
 1. On the **ws2019-08a-rsvault \| Replicated items** blade, ensure that there is an entry representing the **ws2019-08-vm1** virtual machine and verify that its **Replication Health** is listed as **Healthy** and that its **Status** is listed as either **Enabling protection** or displaying a current percentage of synchronization progress.
 
-   > **Note: **You might need to wait a few minutes until the **ws2019-08-vm1** entry appears on the **ws2019-08a-rsvault \| Replicated items** blade.
+   > **Note:** You might need to wait a few minutes until the **ws2019-08-vm1** entry appears on the **ws2019-08a-rsvault \| Replicated items** blade.
 
 1. From the **ws2019-08a-rsvault \| Replicated items** blade, navigate to the **ws2019-08-vm1** replicated items blade.
 1. On the **ws2019-08-vm1** replicated items blade, review the **Health and status**, **Failover readiness**, **Latest recovery points**, and **Infrastructure view** sections. Note the **Planned Failover**, **Failover** and **Test Failover** toolbar icons.
 
-   > **Note: **Wait until the status changes to **Protected**. This might take additional 15 minutes. You will need to refresh the browser page for the status to be updated. While waiting for the replication of the nested VM to complete, proceed to Exercise 4.
+   > **Note:** Wait until the status changes to **Protected**. This might take additional 15 minutes. You will need to refresh the browser page for the status to be updated. While waiting for the replication of the nested VM to complete, proceed to Exercise 4.
 
 1. On the **ws2019-08-vm1** replicated items blade, select **Latest recovery points** and review **Latest crash-consistent** and **Latest app-consistent** recovery points. 
 
@@ -358,7 +358,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create an Azure Site Recovery vault
 
-> **Note: **While, in general, the same vault can be used to implement Azure Site Recovery and Azure Backup functionality, the one hosting Azure Backup should be located close to the location of the backed up items. For this reason, you will create another Azure Site Recovery vault in the same Azure region as the Azure VM you deployed in the second exercise of this lab. 
+> **Note:** While, in general, the same vault can be used to implement Azure Site Recovery and Azure Backup functionality, the one hosting Azure Backup should be located close to the location of the backed up items. For this reason, you will create another Azure Site Recovery vault in the same Azure region as the Azure VM you deployed in the second exercise of this lab. 
 
 1. Within the Remote Desktop session to **ws2019-08-hvm0**, switch to the Virtual Machine Connection window to **ws2019-08-vm1**.
 1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Virtual Machine Connection window to **ws2019-08-vm1**, from the **Server Manager** console, disable the **IE Enhanced Security Configuration** for Administrators. 
@@ -374,14 +374,14 @@ The main tasks for this exercise are as follows:
    |Vault name|ws2019-08b-rsvault|
    |Location|the name of an Azure region into which you deployed the Azure VM in the first exercise of this lab|
 
-    > **Note: **By default, the default configuration for Storage Replication type is set to Geo-redundant (GRS) and Soft Delete is enabled. You will change these settings in the lab to simplify deprovisioning, but you should use them in your production environments.
+    > **Note:** By default, the default configuration for Storage Replication type is set to Geo-redundant (GRS) and Soft Delete is enabled. You will change these settings in the lab to simplify deprovisioning, but you should use them in your production environments.
 
 #### Task 2: Configure the Azure Site Recovery vault
 
 1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Virtual Machine Connection window to **ws2019-08-vm1**, in the Azure portal, navigate to the **ws2019-08b-rsvault** blade.
 1. From the **ws2019-08b-rsvault** blade, set **Storage replication type** of the vault to **Locally-redundant**.
 
-   > **Note: **Storage replication type cannot be changed once you implement protection.
+   > **Note:** Storage replication type cannot be changed once you implement protection.
 
 1. From the **ws2019-08b-rsvault** blade, disable **Soft Delete** of the vault.
 
@@ -396,7 +396,7 @@ The main tasks for this exercise are as follows:
    |Where is your workload running?|On-premises|
    |What do you want to backup?|Files and folders|
 
-   > **Note: **Even though the virtual machine you are using in this task is running in Azure, you can leverage it to evaluate the backup capabilities applicable to any on-premises computer running Windows Server operating system.
+   > **Note:** Even though the virtual machine you are using in this task is running in Azure, you can leverage it to evaluate the backup capabilities applicable to any on-premises computer running Windows Server operating system.
 
 1. From the **ws2019-08b-rsvault \|Backup** blade, initiate the **Prepare infrastructure** procedure.
 1. From the **Prepare infrastructure** blade, download Azure Recovery Services Agent, start the **Microsoft Azure Recovery Services Agent Setup Wizard**, disable the Microsoft Updates option, and complete the installation with the default settings. 
@@ -406,7 +406,7 @@ The main tasks for this exercise are as follows:
 1. On the **Encryption Setting** page of the **Register Server Wizard**, generate passphrase and store it in the local **Documents** folder. 
 1. Review the **Microsoft Azure Backup** warning and proceed to complete the registration. This will automatically open the **Microsoft Azure Backup** console.
 
-   > **Note: **In a production environment, you should store the passphrase file in a secure location other than the server being backed up.
+   > **Note:** In a production environment, you should store the passphrase file in a secure location other than the server being backed up.
 
 
 ### Task 4: Schedule Azure Backup
@@ -424,7 +424,7 @@ The main tasks for this exercise are as follows:
 
 1. In the **Microsoft Azure Backup** console, initiate an on-demand backup with the default settings.
 
-   > **Note: **The option to run backup on demand becomes available once you create a scheduled backup.
+   > **Note:** The option to run backup on demand becomes available once you create a scheduled backup.
 
 1. Switch to the Internet Explorer window displaying the Azure portal, navigate back to the **ws2019-08b-rsvault** Recovery Services vault blade and display **Backup items**. 
 1. From the **ws2019-08b-rsvault \| Backup items** blade, navigate to the **Backup Items (Azure Backup Agent)** blade and verify that there is an entry referencing the **C:\\** drive of **ws2019-08-vm1.**.
@@ -442,7 +442,7 @@ The main tasks for this exercise are as follows:
    |Restore items|Individual files and folders|
    |Select the volume|C:\\|
 
-   > **Note: **Wait for the mount operation to complete. This might take about 2 minutes.
+   > **Note:** Wait for the mount operation to complete. This might take about 2 minutes.
 
 1. On the **Browse And Recover Files** page, note the drive letter of the recovery volume, select **Browse**, and review the tip regarding the use of **Robocopy**. 
 1. Within the Remote Desktop session to **ws2019-08-hvm0**, in the Virtual Machine Connection window to **ws2019-08-vm1**, start **Command Prompt**.
@@ -494,7 +494,7 @@ The main tasks for this exercise are as follows:
 1. On **SEA-CL1**, close the Remote Desktop session to **ws2019-08-hvm0**, switch to the Microsoft Edge window displaying the Azure portal.
 1. In the Azure portal, open a PowerShell session in the **Azure Cloud Shell** pane.
 
-    > **Note: **If this is the first time you're starting **Cloud Shell** and you're presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and then select **Create storage**.
+    > **Note:** If this is the first time you're starting **Cloud Shell** and you're presented with the **You have no storage mounted** message, select the subscription you are using in this lab, and then select **Create storage**.
 
 1. From the Cloud Shell blade, run the following command to delete all resource groups created in this lab:
 
@@ -502,4 +502,4 @@ The main tasks for this exercise are as follows:
    Get-AzResourceGroup -Name 'ws2019-08-*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
-   > **Note: **The command executes asynchronously (as determined by the *-AsJob* parameter), so while you will be able to run another PowerShell command immediately after within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+   > **Note:** The command executes asynchronously (as determined by the *-AsJob* parameter), so while you will be able to run another PowerShell command immediately after within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
