@@ -37,8 +37,6 @@ lab:
 
 1. Select the **Upload/Download files** icon on the top menu ribbon and, in the drop-down menu, select **Upload**. This will display the **Open** dialog box. 
 
-    > **Note**: The icon displays a piece of paper with an up and down arrow in its lower right corner. 
-
 1. In the **Open** dialog box, navigate to **C:\\Labfiles\\Mod07\\Scripts**, and then upload the following three files:
  
    - **Mod07Network.ps1**
@@ -295,7 +293,7 @@ lab:
 
 1. On **Mod07Target \| Serial console** blade, when the EMS window displays, select the **F8** key to display the **Advanced Boot Option** screen.
 1. On **Mod07Target \| Serial console** blade, within the serial console session, use the arrows on the keyboard to navigate the **Advanced Boot Option** screen and select the **Start Windows normally** option.  
-1. On **Mod07Target \| Serial console** blade, exit the serial console by selected the **Overview** node in the console tree.
+1. On **Mod07Target \| Serial console** blade, exit the serial console by selecting the **Overview** node in the console tree.
 
    > **Note**: The **Advanced Boot options** screen displays the message, **Choose Advanced Options for: Windows server 2016**. Mod07Target is running Windows Server 2019. This is expected, since the serial console code has not been updated on Windows Server 2019.
 
