@@ -479,7 +479,7 @@ lab:
 
    |Settings| Value|
    |---|---|
-   |TYPE THE SERVER NAME|ws2019-08-vm1|
+   |TYPE THE SERVER NAME|ws2019-08-vm1.|
    |Reason|Decommissioned|
    |Comments|Decommissioned|
 
